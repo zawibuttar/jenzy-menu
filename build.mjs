@@ -168,7 +168,7 @@ const page = `<!doctype html>
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 118px; }
+html { scroll-padding-top: 118px; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.45; -webkit-text-size-adjust: 100%; }
 a { color: inherit; }
 .wrap { max-width: 720px; margin: 0 auto; padding-inline: 18px; }
@@ -184,12 +184,12 @@ a { color: inherit; }
 .btn { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 18px; border-radius: 12px; font-weight: 700; font-size: 15px; text-decoration: none; border: 1px solid var(--line); background: var(--panel); }
 .btn.primary { background: var(--yellow); border-color: var(--yellow); color: #14130f; }
 .btn small { font-weight: 500; opacity: 0.8; }
-.bar { position: sticky; top: 0; z-index: 5; background: rgba(13, 13, 11, 0.94); backdrop-filter: blur(8px); border-block: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
+.bar { position: sticky; top: 0; z-index: 5; background: var(--bg); border-block: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
 .search { padding-block: 10px 8px; }
 .search input { width: 100%; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font: inherit; padding: 0 14px; outline: none; }
 .search input::placeholder { color: var(--muted); }
 .search input:focus-visible { border-color: var(--yellow); }
-.chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.chips { display: flex; gap: 8px; overflow-x: auto; overscroll-behavior-x: contain; padding-bottom: 10px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .chips::-webkit-scrollbar { display: none; }
 .chips a { flex: none; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
 .chips a.active { background: var(--yellow); border-color: var(--yellow); color: #14130f; }
@@ -224,7 +224,6 @@ footer dd { margin: 0; }
 footer a { color: var(--ink); font-weight: 600; text-decoration-color: var(--gold); text-underline-offset: 3px; }
 .fine { font-size: 13px; }
 [hidden] { display: none !important; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
@@ -274,11 +273,15 @@ ${sections}
 
   var chips = Array.prototype.slice.call(document.querySelectorAll('[data-chip]'));
   var sections = Array.prototype.slice.call(document.querySelectorAll('.category'));
+  var rail = document.querySelector('.chips');
+  var current = '';
   var setActive = function (id) {
+    if (id === current) return;
+    current = id;
     chips.forEach(function (chip) {
       var active = chip.getAttribute('data-chip') === id;
       chip.classList.toggle('active', active);
-      if (active && chip.scrollIntoView) chip.scrollIntoView({ block: 'nearest', inline: 'center' });
+      if (active) rail.scrollLeft = chip.offsetLeft - (rail.clientWidth - chip.offsetWidth) / 2;
     });
   };
   if ('IntersectionObserver' in window) {
