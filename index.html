@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JENZY Lounge Menu</title>
+<meta name="description" content="Menu and prices for JENZY Lounge, UMT Road, near Masjid-e-Aqsa, Johar Town, Lahore. Open 11 am to 2 am, every day.">
+<meta name="theme-color" content="#0d0d0b">
+<meta property="og:title" content="JENZY Lounge Menu">
+<meta property="og:description" content="Burgers, BBQ, fish, shawarma, deals and more. Open 11 am to 2 am, every day.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zawibuttar.github.io/jenzy-menu/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%20200%20200%22%20role%3D%22img%22%20aria-label%3D%22JENZY%20logo%22%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2298%22%20fill%3D%22%230d0d0b%22%2F%3E%3Ccircle%20cx%3D%22100%22%20cy%3D%22100%22%20r%3D%2292%22%20fill%3D%22none%22%20stroke%3D%22%23f2b705%22%20stroke-width%3D%223%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23f2b705%22%20stroke-width%3D%225%22%20stroke-linejoin%3D%22round%22%20transform%3D%22translate(74%2022)%20scale(0.43)%22%3E%3Cpath%20d%3D%22M60%204c-9%200-16%205-19%2012-3-1-6-2-9-2C21%2014%2012%2022%2012%2033c0%209%206%2016%2014%2018v20h68V51c8-2%2014-9%2014-18%200-11-9-19-20-19-3%200-6%201-9%202C76%209%2069%204%2060%204z%22%2F%3E%3Cpath%20d%3D%22M26%2082h68%22%2F%3E%3C%2Fg%3E%3Ctext%20x%3D%22100%22%20y%3D%22128%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2C%20'Times%20New%20Roman'%2C%20serif%22%20font-weight%3D%22700%22%20font-size%3D%2272%22%20fill%3D%22%23f2b705%22%3EJZ%3C%2Ftext%3E%3Ctext%20x%3D%22100%22%20y%3D%22160%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2C%20'Times%20New%20Roman'%2C%20serif%22%20font-weight%3D%22700%22%20font-size%3D%2219%22%20letter-spacing%3D%225%22%20fill%3D%22%23f2b705%22%3EJENZY%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Caveat+Brush&display=swap">
+<style>
+:root {
+  --bg: #0d0d0b;
+  --panel: #171714;
+  --line: #2b2a24;
+  --ink: #f6f3ea;
+  --muted: #aaa598;
+  --yellow: #ffd21f;
+  --gold: #f2b705;
+  --red: #d8312a;
+  --display: 'Caveat Brush', 'Marker Felt', 'Comic Sans MS', cursive;
+  --body: 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 118px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.45; -webkit-text-size-adjust: 100%; }
+a { color: inherit; }
+.wrap { max-width: 720px; margin: 0 auto; padding-inline: 18px; }
+.hero { padding-block: 26px 18px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.hero h1 { margin: 4px 0 0; font-family: var(--display); font-weight: 400; font-size: 56px; line-height: 0.95; color: var(--yellow); letter-spacing: 1px; }
+.hero h1 span { display: block; color: var(--ink); font-size: 34px; letter-spacing: 3px; text-transform: uppercase; }
+.tagline { margin: 0; font-size: 12.5px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); }
+.status { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); font-size: 14px; font-weight: 600; }
+.status i { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
+.status.open i { background: #35c46a; box-shadow: 0 0 0 4px rgba(53, 196, 106, 0.18); }
+.status.closed i { background: var(--red); }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 4px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 18px; border-radius: 12px; font-weight: 700; font-size: 15px; text-decoration: none; border: 1px solid var(--line); background: var(--panel); }
+.btn.primary { background: var(--yellow); border-color: var(--yellow); color: #14130f; }
+.btn small { font-weight: 500; opacity: 0.8; }
+.bar { position: sticky; top: 0; z-index: 5; background: rgba(13, 13, 11, 0.94); backdrop-filter: blur(8px); border-block: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
+.search { padding-block: 10px 8px; }
+.search input { width: 100%; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font: inherit; padding: 0 14px; outline: none; }
+.search input::placeholder { color: var(--muted); }
+.search input:focus-visible { border-color: var(--yellow); }
+.chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.chips::-webkit-scrollbar { display: none; }
+.chips a { flex: none; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.chips a.active { background: var(--yellow); border-color: var(--yellow); color: #14130f; }
+:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+main { padding-block: 8px 28px; }
+.category { padding-top: 26px; }
+.category h2 { margin: 0 0 12px; display: inline-block; font-family: var(--display); font-weight: 400; font-size: 30px; line-height: 1; color: #14130f; background: var(--yellow); padding: 6px 16px 7px; border-radius: 6px 14px 8px 12px; transform: rotate(-1.2deg); }
+.items, .deal-list, .sizes, .includes { list-style: none; margin: 0; padding: 0; }
+.item { padding: 11px 0; border-bottom: 1px solid var(--line); }
+.item h3, .deal h3 { margin: 0; font-size: 17px; font-weight: 600; }
+.line, .sizes li { display: flex; align-items: baseline; gap: 8px; }
+.dots { flex: 1; min-width: 14px; border-bottom: 2px dotted #4a483f; transform: translateY(-4px); }
+.price { font-weight: 700; color: var(--yellow); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sizes { margin-top: 6px; display: flex; flex-direction: column; gap: 4px; }
+.sizes li { padding-left: 14px; color: var(--muted); font-size: 15.5px; }
+.deal-list { display: grid; gap: 12px; }
+@media (min-width: 620px) { .deal-list { grid-template-columns: 1fr 1fr; } }
+.deal { border: 1.5px solid var(--gold); border-radius: 16px; background: var(--panel); padding: 14px 16px 15px; }
+.deal-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.deal h3 { font-family: var(--display); font-weight: 400; font-size: 25px; line-height: 1.05; color: var(--yellow); text-transform: uppercase; }
+.tag { flex: none; background: var(--red); color: #fff; font-weight: 700; font-size: 16px; padding: 4px 11px 5px; border-radius: 5px 10px 6px 9px; transform: rotate(-2deg); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.includes { margin-top: 10px; display: flex; flex-direction: column; gap: 3px; font-size: 15px; }
+.includes li { padding-left: 16px; position: relative; }
+.includes li::before { content: ''; position: absolute; left: 2px; top: 0.58em; width: 6px; height: 6px; border-radius: 50%; background: var(--yellow); }
+.empty { padding: 40px 0; text-align: center; color: var(--muted); }
+footer { border-top: 1px solid var(--line); padding-block: 26px calc(34px + env(safe-area-inset-bottom, 0px)); color: var(--muted); font-size: 15px; }
+footer .wrap { display: flex; flex-direction: column; gap: 14px; }
+footer h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 26px; color: var(--yellow); }
+footer dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; }
+footer dt { color: var(--ink); font-weight: 600; }
+footer dd { margin: 0; }
+footer a { color: var(--ink); font-weight: 600; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.fine { font-size: 13px; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <svg width="108" height="108" viewBox="0 0 200 200" role="img" aria-label="JENZY logo"><circle cx="100" cy="100" r="98" fill="#0d0d0b"/><circle cx="100" cy="100" r="92" fill="none" stroke="#f2b705" stroke-width="3"/><g fill="none" stroke="#f2b705" stroke-width="5" stroke-linejoin="round" transform="translate(74 22) scale(0.43)"><path d="M60 4c-9 0-16 5-19 12-3-1-6-2-9-2C21 14 12 22 12 33c0 9 6 16 14 18v20h68V51c8-2 14-9 14-18 0-11-9-19-20-19-3 0-6 1-9 2C76 9 69 4 60 4z"/><path d="M26 82h68"/></g><text x="100" y="128" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="72" fill="#f2b705">JZ</text><text x="100" y="160" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="19" letter-spacing="5" fill="#f2b705">JENZY</text></svg>
+  <h1>JENZY<span>Lounge</span></h1>
+  <p class="tagline">Restaurant · Fast Food · BBQ · Desi Flavours</p>
+  <span class="status" id="status"><i></i><span>Open 11 am to 2 am, every day</span></span>
+  <div class="actions">
+    <a class="btn primary" href="https://wa.me/923063636272">WhatsApp <small>0306 3636272</small></a>
+    <a class="btn" href="tel:03279686607">Call <small>0327 9686607</small></a>
+  </div>
+</header>
+<div class="bar">
+  <div class="wrap">
+    <div class="search"><label class="sr" for="q" hidden>Search the menu</label><input id="q" type="search" inputmode="search" autocomplete="off" placeholder="Search 75 items, e.g. zinger, tikka, fries"></div>
+    <nav class="chips" aria-label="Menu sections"><a href="#deals" data-chip="deals">Deals</a><a href="#starters" data-chip="starters">Starters</a><a href="#burgers" data-chip="burgers">Burgers</a><a href="#shawarma" data-chip="shawarma">Shawarma</a><a href="#wraps-and-rolls" data-chip="wraps-and-rolls">Wraps &amp; Rolls</a><a href="#sandwiches" data-chip="sandwiches">Sandwiches</a><a href="#fries" data-chip="fries">Fries</a><a href="#pasta" data-chip="pasta">Pasta</a><a href="#rice-bowls" data-chip="rice-bowls">Rice Bowls</a><a href="#bbq" data-chip="bbq">BBQ</a><a href="#fish" data-chip="fish">Fish</a><a href="#breakfast" data-chip="breakfast">Breakfast</a><a href="#naan-and-sides" data-chip="naan-and-sides">Naan &amp; Sides</a><a href="#sauces" data-chip="sauces">Sauces</a><a href="#chai-and-lassi" data-chip="chai-and-lassi">Chai &amp; Lassi</a><a href="#cold-drinks" data-chip="cold-drinks">Cold Drinks</a></nav>
+  </div>
+</div>
+<main class="wrap">
+<section id="deals" class="category deals"><h2>Deals</h2><ul class="deal-list"><li class="deal" data-search="the grand birthday 2 beef smash burgers; 2 grilled burgers; 2 signature shawarmas; 12 chicken nuggets; 2-pound cake; plain fries; 1.5l cool drink"><div class="deal-head"><h3>The Grand Birthday</h3><span class="tag">Rs 5,499</span></div><ul class="includes"><li>2 Beef Smash Burgers</li><li>2 Grilled Burgers</li><li>2 Signature Shawarmas</li><li>12 Chicken Nuggets</li><li>2-Pound Cake</li><li>Plain Fries</li><li>1.5L Cool Drink</li></ul></li><li class="deal" data-search="the family royal 2 zinger burgers; 2 regular shawarmas; 12 chicken wings; masala fries; 1.5l cool drink"><div class="deal-head"><h3>The Family Royal</h3><span class="tag">Rs 2,499</span></div><ul class="includes"><li>2 Zinger Burgers</li><li>2 Regular Shawarmas</li><li>12 Chicken Wings</li><li>Masala Fries</li><li>1.5L Cool Drink</li></ul></li><li class="deal" data-search="the four's feast 4 zinger burgers; 4 fried chicken pieces; plain fries; 1.5l cool drink"><div class="deal-head"><h3>The Four's Feast</h3><span class="tag">Rs 2,599</span></div><ul class="includes"><li>4 Zinger Burgers</li><li>4 Fried Chicken Pieces</li><li>Plain Fries</li><li>1.5L Cool Drink</li></ul></li><li class="deal" data-search="the trio 3 grilled burgers; half plain fries; 1l cool drink"><div class="deal-head"><h3>The Trio</h3><span class="tag">Rs 1,599</span></div><ul class="includes"><li>3 Grilled Burgers</li><li>Half Plain Fries</li><li>1L Cool Drink</li></ul></li><li class="deal" data-search="the duo 2 zinger or grilled burgers; half plain fries; 2 regular cool drinks"><div class="deal-head"><h3>The Duo</h3><span class="tag">Rs 1,149</span></div><ul class="includes"><li>2 Zinger or Grilled Burgers</li><li>Half Plain Fries</li><li>2 Regular Cool Drinks</li></ul></li><li class="deal" data-search="the beef &amp; crunch 4 beef burgers; 4 chicken strips; 1.5l cool drink"><div class="deal-head"><h3>The Beef &amp; Crunch</h3><span class="tag">Rs 2,999</span></div><ul class="includes"><li>4 Beef Burgers</li><li>4 Chicken Strips</li><li>1.5L Cool Drink</li></ul></li><li class="deal" data-search="the rice feast serves 4 persons; chicken bbq malai boti rice bowl; chicken bbq boneless rice bowl; chicken grilled rice bowl; chicken crunchy rice bowl; 1.5l cool drink"><div class="deal-head"><h3>The Rice Feast</h3><span class="tag">Rs 1,999</span></div><ul class="includes"><li>Serves 4 persons</li><li>Chicken BBQ Malai Boti Rice Bowl</li><li>Chicken BBQ Boneless Rice Bowl</li><li>Chicken Grilled Rice Bowl</li><li>Chicken Crunchy Rice Bowl</li><li>1.5L Cool Drink</li></ul></li><li class="deal" data-search="desi 4-person deal half kg fish; half kg bbq tikka; 6 plain rotis; 4 mint raitas; 1.5l cool drink"><div class="deal-head"><h3>Desi 4-Person Deal</h3><span class="tag">Rs 2,199</span></div><ul class="includes"><li>Half kg Fish</li><li>Half kg BBQ Tikka</li><li>6 Plain Rotis</li><li>4 Mint Raitas</li><li>1.5L Cool Drink</li></ul></li><li class="deal" data-search="desi 6-person deal half kg fish; half kg malai boti; half kg chicken kebab; 1 kg tikka boti; 8 plain rotis; 6 mint raitas; 1.5l cool drink"><div class="deal-head"><h3>Desi 6-Person Deal</h3><span class="tag">Rs 4,099</span></div><ul class="includes"><li>Half kg Fish</li><li>Half kg Malai Boti</li><li>Half kg Chicken Kebab</li><li>1 kg Tikka Boti</li><li>8 Plain Rotis</li><li>6 Mint Raitas</li><li>1.5L Cool Drink</li></ul></li></ul></section>
+<section id="starters" class="category"><h2>Starters</h2><ul class="items"><li class="item" data-search="chicken nuggets "><h3>Chicken Nuggets</h3><ul class="sizes"><li><span>6 pcs</span><span class="dots"></span><span class="price">Rs 349</span></li><li><span>12 pcs</span><span class="dots"></span><span class="price">Rs 649</span></li></ul></li><li class="item" data-search="chicken wings "><h3>Chicken Wings</h3><ul class="sizes"><li><span>6 pcs</span><span class="dots"></span><span class="price">Rs 399</span></li><li><span>12 pcs</span><span class="dots"></span><span class="price">Rs 749</span></li></ul></li><li class="item" data-search="oven-baked wings "><h3>Oven-Baked Wings</h3><ul class="sizes"><li><span>6 pcs</span><span class="dots"></span><span class="price">Rs 399</span></li><li><span>12 pcs</span><span class="dots"></span><span class="price">Rs 749</span></li></ul></li><li class="item" data-search="bbq wings "><h3>BBQ Wings</h3><ul class="sizes"><li><span>6 pcs</span><span class="dots"></span><span class="price">Rs 399</span></li><li><span>12 pcs</span><span class="dots"></span><span class="price">Rs 749</span></li></ul></li><li class="item" data-search="chicken fried strips "><h3>Chicken Fried Strips</h3><ul class="sizes"><li><span>5 pcs</span><span class="dots"></span><span class="price">Rs 499</span></li><li><span>10 pcs</span><span class="dots"></span><span class="price">Rs 899</span></li></ul></li></ul></section>
+<section id="burgers" class="category"><h2>Burgers</h2><ul class="items"><li class="item" data-search="beef smash burger single patty with cheese "><div class="line"><h3>Beef Smash Burger Single Patty with Cheese</h3><span class="dots"></span><span class="price">Rs 649</span></div></li><li class="item" data-search="beef smash burger double patty "><div class="line"><h3>Beef Smash Burger Double Patty</h3><span class="dots"></span><span class="price">Rs 949</span></div></li><li class="item" data-search="beef smash burger triple patty "><div class="line"><h3>Beef Smash Burger Triple Patty</h3><span class="dots"></span><span class="price">Rs 1,249</span></div></li><li class="item" data-search="grilled special burger single fillet "><div class="line"><h3>Grilled Special Burger Single Fillet</h3><span class="dots"></span><span class="price">Rs 499</span></div></li><li class="item" data-search="grilled burger double fillet "><div class="line"><h3>Grilled Burger Double Fillet</h3><span class="dots"></span><span class="price">Rs 749</span></div></li><li class="item" data-search="big mouth burger with cheese "><div class="line"><h3>Big Mouth Burger with Cheese</h3><span class="dots"></span><span class="price">Rs 799</span></div></li><li class="item" data-search="zinger burger "><div class="line"><h3>Zinger Burger</h3><span class="dots"></span><span class="price">Rs 449</span></div></li><li class="item" data-search="chicken burger with fries "><div class="line"><h3>Chicken Burger with Fries</h3><span class="dots"></span><span class="price">Rs 449</span></div></li></ul></section>
+<section id="shawarma" class="category"><h2>Shawarma</h2><ul class="items"><li class="item" data-search="grilled shawarma "><div class="line"><h3>Grilled Shawarma</h3><span class="dots"></span><span class="price">Rs 449</span></div></li><li class="item" data-search="zinger shawarma "><div class="line"><h3>Zinger Shawarma</h3><span class="dots"></span><span class="price">Rs 399</span></div></li><li class="item" data-search="chicken shawarma "><div class="line"><h3>Chicken Shawarma</h3><span class="dots"></span><span class="price">Rs 330</span></div></li><li class="item" data-search="grilled shawarma platter "><div class="line"><h3>Grilled Shawarma Platter</h3><span class="dots"></span><span class="price">Rs 799</span></div></li><li class="item" data-search="chicken shawarma platter "><div class="line"><h3>Chicken Shawarma Platter</h3><span class="dots"></span><span class="price">Rs 649</span></div></li><li class="item" data-search="zinger shawarma platter "><div class="line"><h3>Zinger Shawarma Platter</h3><span class="dots"></span><span class="price">Rs 799</span></div></li></ul></section>
+<section id="wraps-and-rolls" class="category"><h2>Wraps &amp; Rolls</h2><ul class="items"><li class="item" data-search="grilled wrap "><div class="line"><h3>Grilled Wrap</h3><span class="dots"></span><span class="price">Rs 699</span></div></li><li class="item" data-search="crunchy wrap "><div class="line"><h3>Crunchy Wrap</h3><span class="dots"></span><span class="price">Rs 699</span></div></li><li class="item" data-search="jenzy special roll "><div class="line"><h3>Jenzy Special Roll</h3><span class="dots"></span><span class="price">Rs 549</span></div></li><li class="item" data-search="malai boti roll "><div class="line"><h3>Malai Boti Roll</h3><span class="dots"></span><span class="price">Rs 499</span></div></li><li class="item" data-search="chicken tikka roll "><div class="line"><h3>Chicken Tikka Roll</h3><span class="dots"></span><span class="price">Rs 499</span></div></li></ul></section>
+<section id="sandwiches" class="category"><h2>Sandwiches</h2><ul class="items"><li class="item" data-search="grilled sandwich with fries "><div class="line"><h3>Grilled Sandwich with Fries</h3><span class="dots"></span><span class="price">Rs 649</span></div></li><li class="item" data-search="chicken sandwich with fries "><div class="line"><h3>Chicken Sandwich with Fries</h3><span class="dots"></span><span class="price">Rs 499</span></div></li><li class="item" data-search="club sandwich with fries "><div class="line"><h3>Club Sandwich with Fries</h3><span class="dots"></span><span class="price">Rs 449</span></div></li></ul></section>
+<section id="fries" class="category"><h2>Fries</h2><ul class="items"><li class="item" data-search="loaded fries "><div class="line"><h3>Loaded Fries</h3><span class="dots"></span><span class="price">Rs 599</span></div></li><li class="item" data-search="plain fries "><h3>Plain Fries</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 149</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 299</span></li></ul></li><li class="item" data-search="masala fries "><h3>Masala Fries</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 199</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 349</span></li></ul></li><li class="item" data-search="garlic fries "><h3>Garlic Fries</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 249</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 399</span></li></ul></li></ul></section>
+<section id="pasta" class="category"><h2>Pasta</h2><ul class="items"><li class="item" data-search="alfredo pasta "><div class="line"><h3>Alfredo Pasta</h3><span class="dots"></span><span class="price">Rs 799</span></div></li><li class="item" data-search="crunchy pasta "><div class="line"><h3>Crunchy Pasta</h3><span class="dots"></span><span class="price">Rs 649</span></div></li><li class="item" data-search="creamy pasta "><div class="line"><h3>Creamy Pasta</h3><span class="dots"></span><span class="price">Rs 649</span></div></li></ul></section>
+<section id="rice-bowls" class="category"><h2>Rice Bowls</h2><ul class="items"><li class="item" data-search="chicken grilled rice bowl "><div class="line"><h3>Chicken Grilled Rice Bowl</h3><span class="dots"></span><span class="price">Rs 499</span></div></li><li class="item" data-search="chicken crunchy rice bowl "><div class="line"><h3>Chicken Crunchy Rice Bowl</h3><span class="dots"></span><span class="price">Rs 499</span></div></li><li class="item" data-search="chicken bbq malai boti rice bowl "><div class="line"><h3>Chicken BBQ Malai Boti Rice Bowl</h3><span class="dots"></span><span class="price">Rs 499</span></div></li><li class="item" data-search="chicken bbq boneless rice bowl "><div class="line"><h3>Chicken BBQ Boneless Rice Bowl</h3><span class="dots"></span><span class="price">Rs 499</span></div></li></ul></section>
+<section id="bbq" class="category"><h2>BBQ</h2><ul class="items"><li class="item" data-search="jenzy special boneless tikka "><h3>Jenzy Special Boneless Tikka</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 1,045</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 1,999</span></li></ul></li><li class="item" data-search="malai boti "><h3>Malai Boti</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 999</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 1,899</span></li></ul></li><li class="item" data-search="chicken tikka "><h3>Chicken Tikka</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 949</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 1,799</span></li></ul></li><li class="item" data-search="chicken kebab "><h3>Chicken Kebab</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 799</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 1,499</span></li></ul></li><li class="item" data-search="chicken reshmi kebab "><h3>Chicken Reshmi Kebab</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 899</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 1,699</span></li></ul></li><li class="item" data-search="chicken cheese kebab "><h3>Chicken Cheese Kebab</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 1,099</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 1,999</span></li></ul></li></ul></section>
+<section id="fish" class="category"><h2>Fish</h2><ul class="items"><li class="item" data-search="boneless fingers fish "><h3>Boneless Fingers Fish</h3><ul class="sizes"><li><span>Quarter</span><span class="dots"></span><span class="price">Rs 799</span></li><li><span>Half</span><span class="dots"></span><span class="price">Rs 1,549</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 2,999</span></li></ul></li><li class="item" data-search="boneless fish tikka "><h3>Boneless Fish Tikka</h3><ul class="sizes"><li><span>Quarter</span><span class="dots"></span><span class="price">Rs 799</span></li><li><span>Half</span><span class="dots"></span><span class="price">Rs 1,549</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 2,999</span></li></ul></li><li class="item" data-search="grilled rahu fish "><h3>Grilled Rahu Fish</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 899</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 1,699</span></li></ul></li><li class="item" data-search="fish fry rahu "><h3>Fish Fry Rahu</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 899</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 1,699</span></li></ul></li></ul></section>
+<section id="breakfast" class="category"><h2>Breakfast</h2><ul class="items"><li class="item" data-search="khowa wale channay "><h3>Khowa Wale Channay</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 149</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 249</span></li></ul></li><li class="item" data-search="chicken channay "><h3>Chicken Channay</h3><ul class="sizes"><li><span>Half</span><span class="dots"></span><span class="price">Rs 249</span></li><li><span>Full</span><span class="dots"></span><span class="price">Rs 399</span></li></ul></li><li class="item" data-search="anda "><div class="line"><h3>Anda</h3><span class="dots"></span><span class="price">Rs 60</span></div></li><li class="item" data-search="kofta "><div class="line"><h3>Kofta</h3><span class="dots"></span><span class="price">Rs 60</span></div></li></ul></section>
+<section id="naan-and-sides" class="category"><h2>Naan &amp; Sides</h2><ul class="items"><li class="item" data-search="plain naan "><div class="line"><h3>Plain Naan</h3><span class="dots"></span><span class="price">Rs 30</span></div></li><li class="item" data-search="rogni naan "><div class="line"><h3>Rogni Naan</h3><span class="dots"></span><span class="price">Rs 80</span></div></li><li class="item" data-search="raita "><div class="line"><h3>Raita</h3><span class="dots"></span><span class="price">Rs 80</span></div></li><li class="item" data-search="salad "><div class="line"><h3>Salad</h3><span class="dots"></span><span class="price">Rs 80</span></div></li></ul></section>
+<section id="sauces" class="category"><h2>Sauces</h2><ul class="items"><li class="item" data-search="jenzy special sauce "><div class="line"><h3>Jenzy Special Sauce</h3><span class="dots"></span><span class="price">Rs 99</span></div></li><li class="item" data-search="honey mustard sauce "><div class="line"><h3>Honey Mustard Sauce</h3><span class="dots"></span><span class="price">Rs 99</span></div></li><li class="item" data-search="peri peri sauce "><div class="line"><h3>Peri Peri Sauce</h3><span class="dots"></span><span class="price">Rs 99</span></div></li><li class="item" data-search="shapotle sauce "><div class="line"><h3>Shapotle Sauce</h3><span class="dots"></span><span class="price">Rs 99</span></div></li><li class="item" data-search="mint sauce "><div class="line"><h3>Mint Sauce</h3><span class="dots"></span><span class="price">Rs 99</span></div></li></ul></section>
+<section id="chai-and-lassi" class="category"><h2>Chai &amp; Lassi</h2><ul class="items"><li class="item" data-search="jenzy special doodh patti chai "><div class="line"><h3>Jenzy Special Doodh Patti Chai</h3><span class="dots"></span><span class="price">Rs 149</span></div></li><li class="item" data-search="regular chai "><div class="line"><h3>Regular Chai</h3><span class="dots"></span><span class="price">Rs 100</span></div></li><li class="item" data-search="lassi "><div class="line"><h3>Lassi</h3><span class="dots"></span><span class="price">Rs 199</span></div></li></ul></section>
+<section id="cold-drinks" class="category"><h2>Cold Drinks</h2><ul class="items"><li class="item" data-search="cold drink "><h3>Cold Drink</h3><ul class="sizes"><li><span>345 ml</span><span class="dots"></span><span class="price">Rs 100</span></li><li><span>500 ml</span><span class="dots"></span><span class="price">Rs 150</span></li><li><span>1 Litre</span><span class="dots"></span><span class="price">Rs 200</span></li><li><span>1.5 Litre</span><span class="dots"></span><span class="price">Rs 250</span></li></ul></li><li class="item" data-search="water "><h3>Water</h3><ul class="sizes"><li><span>500 ml</span><span class="dots"></span><span class="price">Rs 60</span></li><li><span>1.5 Litre</span><span class="dots"></span><span class="price">Rs 120</span></li></ul></li></ul></section>
+<p class="empty" id="empty" hidden>Nothing on the menu matches that. Try another word.</p>
+</main>
+<footer>
+  <div class="wrap">
+    <h2>Visit or order</h2>
+    <dl>
+      <dt>Address</dt><dd>UMT Road, near Masjid-e-Aqsa, Johar Town, Lahore</dd>
+      <dt>Hours</dt><dd>11 am to 2 am, every day</dd>
+      <dt>WhatsApp</dt><dd><a href="https://wa.me/923063636272">0306 3636272</a></dd>
+      <dt>Phone</dt><dd><a href="tel:03279686607">0327 9686607</a></dd>
+    </dl>
+    <p class="fine">Prices are in Pakistani rupees and may change. Menu updated 4 October 2026.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  var opensAt = 11, closesAt = 2, zone = "Asia/Karachi";
+  var status = document.getElementById('status');
+  try {
+    var hour = Number(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hourCycle: 'h23', timeZone: zone }).format(new Date()));
+    var open = opensAt < closesAt ? hour >= opensAt && hour < closesAt : hour >= opensAt || hour < closesAt;
+    var clock = function (h) { return (h % 12 || 12) + (h < 12 ? ' am' : ' pm'); };
+    status.classList.add(open ? 'open' : 'closed');
+    status.lastElementChild.textContent = open ? 'Open now, until ' + clock(closesAt) : 'Closed now, opens ' + clock(opensAt);
+  } catch (error) {}
+
+  var chips = Array.prototype.slice.call(document.querySelectorAll('[data-chip]'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.category'));
+  var setActive = function (id) {
+    chips.forEach(function (chip) {
+      var active = chip.getAttribute('data-chip') === id;
+      chip.classList.toggle('active', active);
+      if (active && chip.scrollIntoView) chip.scrollIntoView({ block: 'nearest', inline: 'center' });
+    });
+  };
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { if (entry.isIntersecting) setActive(entry.target.id); });
+    }, { rootMargin: '-125px 0px -70% 0px' });
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+
+  var input = document.getElementById('q');
+  var empty = document.getElementById('empty');
+  input.addEventListener('input', function () {
+    var words = input.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    var any = false;
+    sections.forEach(function (section) {
+      var shown = 0;
+      Array.prototype.forEach.call(section.querySelectorAll('[data-search]'), function (item) {
+        var text = item.getAttribute('data-search');
+        var match = words.every(function (word) { return text.indexOf(word) !== -1; });
+        item.hidden = !match;
+        if (match) shown += 1;
+      });
+      section.hidden = shown === 0;
+      if (shown) any = true;
+    });
+    empty.hidden = any;
+  });
+})();
+</script>
+</body>
+</html>

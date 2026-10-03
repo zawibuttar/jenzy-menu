@@ -1,0 +1,13 @@
+{
+  "name": "jenzy-menu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QR menu page for JENZY Lounge",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "qrcode": "^1.5.4"
+  }
+}
